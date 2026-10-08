@@ -1,2 +1,2 @@
 # devry-test
-to test azure platform
+to test the resource provisioning
