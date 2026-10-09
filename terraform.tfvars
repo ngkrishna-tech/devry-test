@@ -1,0 +1,5 @@
+project_id  = "devry-test"
+region      = "us-central1"
+zone        = "us-central1-a"
+vm_name     = "terraform-vm-01"
+machine_type = "e2-micro"

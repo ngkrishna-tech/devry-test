@@ -1,9 +1,17 @@
-resource "google_storage_bucket" "bucket" {
-  name          = "test-devry-bucket-2026"
-  location      = "US"
-  storage_class = "STANDARD"
+resource "google_compute_instance" "vm" {
+  name         = var.vm_name
+  machine_type = var.machine_type
+  zone         = var.zone
 
-  uniform_bucket_level_access = true
+  boot_disk {
+    initialize_params {
+      image = "debian-cloud/debian-12"
+    }
+  }
 
-  force_destroy = true
+  network_interface {
+    network = "default"
+
+    access_config {}
+  }
 }
